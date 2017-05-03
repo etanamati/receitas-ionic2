@@ -1,3 +1,6 @@
+import { AutenticacaoService } from './../services/autenticacao';
+import { RegistroPage } from './../pages/registro/registro';
+import { SigninPage } from './../pages/signin/signin';
 import { ReceitasService } from './../services/receitas';
 import { ListaComprasService } from './../services/lista-components';
 import { ListaComprasPage } from './../pages/lista-compras-page/lista-compras-page';
@@ -20,7 +23,9 @@ import { EditaReceitaPage } from "../pages/edita-receita-page/edita-receita-page
     ReceitasPage,
     ReceitaPage,
     ListaComprasPage,
-    EditaReceitaPage
+    EditaReceitaPage,
+    SigninPage,
+    RegistroPage
   ],
   imports: [
     BrowserModule,
@@ -33,14 +38,17 @@ import { EditaReceitaPage } from "../pages/edita-receita-page/edita-receita-page
     ReceitasPage,
     ReceitaPage,
     ListaComprasPage,
-    EditaReceitaPage
+    EditaReceitaPage,
+    SigninPage,
+    RegistroPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ListaComprasService,
-    ReceitasService
+    ReceitasService,
+    AutenticacaoService
   ]
 })
 export class AppModule {}
