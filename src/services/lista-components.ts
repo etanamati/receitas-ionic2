@@ -30,7 +30,7 @@ export class ListaComprasService {
 
     findItem(nome: string){
       for(let i = this.itens.length - 1; i >= 0; i--){
-        if (this.itens[i].nome == nome){
+        if (this.itens[i].nome.toUpperCase() == nome.toUpperCase()){
             return i;
         }
       }
