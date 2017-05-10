@@ -28,10 +28,10 @@ export class RegistroPage {
   }
 
   buildValidacoes(){
-    const formCtrl: FormControl = new FormControl(['', Validators.compose([Validators.required])]);
-    const formCtrlConfirmaSenha: FormControl = new FormControl(['', Validators.compose([Validators.required, ValidacoesGerais.valoresIguais(formCtrl)])]);
+    const formCtrl: FormControl = new FormControl('', Validators.compose([Validators.required, Validators.minLength(6)]));
+    const formCtrlConfirmaSenha: FormControl = new FormControl('', Validators.compose([Validators.required, ValidacoesGerais.valoresIguais(formCtrl)]));
     this.form = this.formBuilder.group({
-      email: ['', Validators.compose([Validators.required])],
+      email: ['', Validators.compose([Validators.required, Validators.email])],
       senha: formCtrl,
       confirmacaoSenha: formCtrlConfirmaSenha
     });

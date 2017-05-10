@@ -16,21 +16,21 @@
     <ion-list>
       <ion-item>
         <ion-label>Email</ion-label>
-        <ion-input type="email" formControlName="email" required email></ion-input>
+        <ion-input type="email" formControlName="email"></ion-input>
       </ion-item>
       <small [hidden]="form.controls.email.length == 0 || form.controls.email.valid || (form.controls.email.pristine && !form.submitted)">
           Email inválido!
       </small>
       <ion-item>
         <ion-label>Senha</ion-label>
-        <ion-input type="password" formControlName="senha" required [minlength]="6"></ion-input>
+        <ion-input type="password" formControlName="senha"></ion-input>
       </ion-item>
       <small [hidden]="form.controls.senha.length == 0 || form.controls.senha.valid || (form.controls.senha.pristine && !form.submitted)">
           Senha inválida!
       </small>
       <ion-item>
         <ion-label>Confirmação Senha</ion-label>
-        <ion-input type="password" formControlName="confirmacaoSenha" required [minlength]="6"></ion-input>
+        <ion-input type="password" formControlName="confirmacaoSenha"></ion-input>
       </ion-item>
       <small [hidden]="form.controls.confirmacaoSenha.length == 0 || form.controls.confirmacaoSenha.valid || (form.controls.confirmacaoSenha.pristine && !form.submitted)">
           Confirmação de senha inválida!
